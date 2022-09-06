@@ -1,11 +1,52 @@
-import React from 'react';
+import React, {useEffect, useState} from "react";
+import axios from 'axios';
+import {useNavigate} from "react-router-dom";
 
-function Course(){
+function Courses(){
+    const[courses, setCourses] = useState([])
+    const navigate = useNavigate();
+    const handleClick = id => {
+        navigate(`${id}`)
+      };
+
+    useEffect(()=>{
+        getCourseDetails();
+    }, [])
+    const getCourseDetails =() =>{
+        axios
+        .get('http://localhost:9292/courses')
+        .then((res)=>{
+            console.log(res);
+            setCourses(res.data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+  
+    };
+
     return(
-        <div className='course-div'>
-            <h1>Courses</h1>
+        <div className="all-courses">
+            <div className="course-container">
+            {courses.map((course) => (
+                    <div className="course-det" key = {course.id}>
+                        <h2>{course.title}</h2>
+                        <div className="course-inst-det">
+                          
+                                <h3>Rating: {course.rating } </h3>
+                                </div>
+                        <div className="book-item-det">
+                        <h3>Description:{course.description}</h3>
+                        <div>
+<button className="start-btn" onClick={() => handleClick(course.id)}>Start</button>
+    </div>
+                        
+                        </div>
+                        </div>
+                ))}
+                </div>
         </div>
     )
 }
 
-export default Course;
+export default Courses;

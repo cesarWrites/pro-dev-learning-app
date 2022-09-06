@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import { Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
-import Course from './components/Course';
-import Lesson from './components/Lesson';
-
+import Courses from './components/Course';
+import Lessons from './components/Lesson';
+import Students from './components/student'
+import Instructors from './components/Instructor';
 function App() {
   return (
     <div className="App">
@@ -12,14 +13,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}
           />
-          <Route path="/courses/:courseId"
-          element={<Lesson />}
+          <Route path="courses"
+          element={<Courses />}
           />
-          <Route path="" element={<Lesson />}
+          <Route path="courses/:id" element={<Lessons/>}/>
+          <Route path="students" element={<Students />}
+          />
+           <Route path="instructors" element={<Instructors />}
           />
         </Routes>
       </main>
-
     </div>
   );
 }
