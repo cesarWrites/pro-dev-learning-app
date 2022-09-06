@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from 'axios';
+import NavBar from "./NavBar";
 import {useNavigate} from "react-router-dom";
 
 function Courses(){
@@ -27,6 +28,8 @@ function Courses(){
 
     return(
         <div className="all-courses">
+            <NavBar/>
+            <h1>Available courses</h1>
             <div className="course-container">
             {courses.map((course) => (
                     <div className="course-det" key = {course.id}>
