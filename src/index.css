@@ -107,4 +107,42 @@ li {
   width: 100%;
 }
 
+form.new-tip-form {
+  margin: 2%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  background-color: #03042e;
+  width: 45vh;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+form.new-tip-form input{
+  margin: 4%;
+  margin-bottom: 2%;
+  height: 30px;
+}
+form.new-tip-form textarea{
+  margin: 4%;
+}
+
+.btn-inpt{
+  width: 40%;
+  margin-bottom: 4%;
+  padding: 0;
+  background-color:white;
+  color: black;
+  font-size: 1.0rem;
+  text-align: center;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+
+
 
