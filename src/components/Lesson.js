@@ -27,6 +27,7 @@ function Lessons(){
                     <p>{lesson.description}</p>
                     </div>
                     ))}
+                    <button>Complete</button>
         </div>
     )
 }

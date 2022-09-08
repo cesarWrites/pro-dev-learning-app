@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from 'axios';
+import DeleteStudent from "./APIs/DeleteStudent";
 
 function Instructors(){
     const[instructors, setInstructors] = useState([])
@@ -20,6 +21,8 @@ function Instructors(){
   
     };
     return(
+        <div className="instructor-div">
+            <h1>Instructor profiles</h1>
         <div className="instructors-container">
         {instructors.map((instructor) => (
                 <div className="instructor-det" key = {instructor.id}>
@@ -30,6 +33,8 @@ function Instructors(){
                     </div>
                     </div>
             ))}
+            </div>
+            <DeleteStudent/>
             </div>
     )
 }
