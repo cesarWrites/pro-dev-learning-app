@@ -22,15 +22,15 @@ function NewCourse(){
     return(
         <div>
     <form className="new-tip-form" onSubmit={handleSubmit}>
-      <input placeholder="UserName" type="text" 
+      <input placeholder="course title" type="text" 
       value={title} 
       onChange={(e) => setTitle(e.target.value)}/>
       <textarea placeholder="Write your description..." rows={10} type="text" value={description} 
       onChange={(e) => setDescription(e.target.value)}/>
-       <input placeholder="UserName" type="text" 
+       <input placeholder="rating" type="text" 
       value={rating} 
       onChange={(e) => setRating(e.target.value)}/>
-      <input type="submit" value="Share the tech tip" className="btn-inpt"/>
+      <input type="submit" value="Share the course" className="btn-inpt"/>
     </form>
         </div>
     )

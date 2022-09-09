@@ -1,0 +1,27 @@
+.app-name{
+    float: left;
+    margin-left: 2%;
+}
+
+.app-name span{
+    color: yellow;
+}
+
+.home-img{
+    width: 50%;
+    padding-right: 2%;
+}
+
+.head-sect{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5%;
+  }
+  
+  .bg-image img{
+    width: 100%;
+    border: 5px rounded white;
+  }
+
+  

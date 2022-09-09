@@ -30,7 +30,6 @@ code {
 .home-div{
   text-align: center;
   font-size: 1.5rem;
- font-family: sans-serif;
 }
 .start-btn{
   border-bottom-left-radius: 10%;
@@ -73,9 +72,8 @@ nav{
 
 ul {
   list-style: none;
-  background-color: gray;
   padding: 2%;
-  width: 100%;
+  float: right;
 }
 
 li {
@@ -91,14 +89,12 @@ li {
 }
 
 .foot-div{
-  background-color: gray;
-  padding: 2%;
-  margin-top: 5%;
+  background-color: yellow;
+  padding-top: 2%;
+  height: 40vh;
   text-align: center;
-  left: 0;
-  bottom: 0;
-  height: 60px;
   width: 100%;
+  position: absolute;
 }
 
 form.new-tip-form {
@@ -119,6 +115,8 @@ form.new-tip-form input{
   margin: 4%;
   margin-bottom: 2%;
   height: 30px;
+  border-radius: 25px;
+  padding: 2%;
 }
 form.new-tip-form textarea{
   margin: 4%;
@@ -138,22 +136,11 @@ form.new-tip-form textarea{
   border-bottom-left-radius: 10%;
 }
 
-.head-sect{
-  display: flex;
-  flex-direction: row;
-  padding: 2%;
-  width: 100%;
-}
-
-.bg-image{
-  width: 100%;
-}
-
 .add-course-btn{
   background-color: white;
-  padding: 4%;
-  width: 50%;
-  height: 15%;
+  padding: 2%;
+  width: 20%;
+  height: 10%;
   border-radius: 15%;
   margin-top: 6%;
   font-weight: bold;
@@ -280,7 +267,6 @@ form .complete-course-form input{
 
 .navbar-1 ul {
   list-style: none;
-  background-color: gray;
   padding: 2%;
   width: 100%;
 }
