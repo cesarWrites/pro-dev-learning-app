@@ -37,6 +37,7 @@ function Courses(){
                         <div className="course-inst-det">
                           
                                 <h3>Rating: {course.rating } </h3>
+                                <span className="star">&#9733;</span> 
                                 </div>
                         <div className="book-item-det">
                         <h3>Description:{course.description}</h3>

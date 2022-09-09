@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from 'axios';
+import NavBar from "./NavBar";
 import DeleteStudent from "./APIs/DeleteStudent";
 
 function Instructors(){
@@ -22,6 +23,7 @@ function Instructors(){
     };
     return(
         <div className="instructor-div">
+            <NavBar/>
             <h1>Instructor profiles</h1>
         <div className="instructors-container">
         {instructors.map((instructor) => (

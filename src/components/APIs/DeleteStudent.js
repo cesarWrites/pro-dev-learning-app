@@ -7,8 +7,7 @@ function DeleteStudent(){
 const handleSubmit =(e) => {
     e.preventDefault();
   
-  axios.delete('http://localhost:9292/students/id', {
-  id:id
+  axios.delete(`http://localhost:9292/students/${id}`, {
 })
 .then((response) => {
   console.log(response)
@@ -23,7 +22,7 @@ const handleSubmit =(e) => {
       <input placeholder="student id" type="text" 
       value={id} 
       onChange={(e) => setId(e.target.value)}/>
-       <input type="submit" value="remove student" className="btn-inpt"/>
+       <input type="submit" value="remove student" className="btn-delete-inpt"/>
     </form>
         </div>
     )

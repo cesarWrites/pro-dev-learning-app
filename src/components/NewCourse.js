@@ -25,7 +25,7 @@ function NewCourse(){
       <input placeholder="UserName" type="text" 
       value={title} 
       onChange={(e) => setTitle(e.target.value)}/>
-      <textarea placeholder="Write your tech tip here..." rows={10} type="text" value={description} 
+      <textarea placeholder="Write your description..." rows={10} type="text" value={description} 
       onChange={(e) => setDescription(e.target.value)}/>
        <input placeholder="UserName" type="text" 
       value={rating} 

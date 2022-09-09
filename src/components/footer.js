@@ -1,9 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 function Footer(){
     return(
         <div className="foot-div">
-            <p>Copyright c 2022</p>
-            <p>Designed by Cecil</p>
+            <footer>
+  <p>designed by: Sarah Mukuti <br/>
+  <a href="sarahm@gmail.com">sarahmukuti@gmail.com</a></p>
+  <p><span>&#169;</span>2022</p>
+</footer>
         </div>
     )
 

@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import NavBar from "./NavBar";
+import Footer from "./footer";
 
 
 function Students(){
   const[students, setStudents] = useState([])
-
   useEffect(()=>{
       getStudentDetails();
   }, [])
@@ -29,6 +29,9 @@ function Students(){
           <div className="student-container">
           {students.map((student) => (
                   <div className="student-det" key = {student.id}>
+                    <div className="id">
+                        <h1>{student.id}</h1>
+                    </div>
                     <div className="use-name">
                       <h1>{student.username}</h1>
                       </div>
@@ -38,6 +41,7 @@ function Students(){
                       </div>
               ))}
               </div>
+              <Footer/>
       </div>
   )
 };

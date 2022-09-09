@@ -1,7 +1,14 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import CompleteCourse from "./APIs/completeCourse";
+
 function Lessons(){
+    
     const[lessons, setLessons] = useState([])
+    let [show, setForm] = useState(false);
+    function handleClick(){
+      setForm(true);
+    }
     useEffect(()=>{
         getAllLessons()
     })
@@ -27,7 +34,10 @@ function Lessons(){
                     <p>{lesson.description}</p>
                     </div>
                     ))}
-                    <button>Complete</button>
+                   
+              <button className="complete-course-btn" onClick={handleClick}>Complete</button>
+        {show ? <CompleteCourse/> : null}
+
         </div>
     )
 }
