@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pro-dev-learning-app/static/css/main.037b5593.css",
+    "main.js": "/pro-dev-learning-app/static/js/main.146d95de.js",
+    "static/js/787.5e674ef2.chunk.js": "/pro-dev-learning-app/static/js/787.5e674ef2.chunk.js",
+    "index.html": "/pro-dev-learning-app/index.html",
+    "main.037b5593.css.map": "/pro-dev-learning-app/static/css/main.037b5593.css.map",
+    "main.146d95de.js.map": "/pro-dev-learning-app/static/js/main.146d95de.js.map",
+    "787.5e674ef2.chunk.js.map": "/pro-dev-learning-app/static/js/787.5e674ef2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.037b5593.css",
+    "static/js/main.146d95de.js"
+  ]
+}
