@@ -15,7 +15,7 @@ function Lessons(){
 
     const getAllLessons =() =>{
         axios
-        .get('http://localhost:9292/lessons')
+        .get('https://arcane-gorge-73424.herokuapp.com/lessons')
         .then((res)=>{
             console.log(res);
             setLessons(res.data);

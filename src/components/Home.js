@@ -4,14 +4,20 @@ import NavBar from "./NavBar";
 import Footer from "./footer";
 import './home.css';
 import NewCourse from "./NewCourse";
+import SignUp from "./pages/SignUp";
+import Partners from "./Partners";
+import Login from "./pages/Login";
 
-function Home(){
+function Home(user){
     let [show, setForm] = useState(false);
+    let [signUp, setSignUp] = useState(false);
     const background_url = "https://images.unsplash.com/photo-1513258496099-48168024aec0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bGVhcm5pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-
     function handleClick(){
         setForm(true);
       }
+    function handleSignUpClick(){
+        setSignUp(true);
+    }
     return(
         <div className="home-div">
             <header>
@@ -26,13 +32,21 @@ function Home(){
                     <p>Create a new course in any interesting subject.</p>
                     <p>Add students to a specifc course and change their status as they continue with the course.</p>
                 </article>
+                <div className="create-course">
                 <button className="add-course-btn" onClick={handleClick}>Create a Course</button>
         {show ? <NewCourse /> : null}
+        <button className="add-course-btn" onClick={handleSignUpClick}>Start Leaning</button>
+        {signUp ? <SignUp /> : null}
+        </div>
+        <Login />
+            
             </div>
+
             <div className='bg-image'>
             <img className="home-img" src={background_url}/>
             </div>
             </div>
+            <Partners/>
             <Footer/>
         </div>
     )

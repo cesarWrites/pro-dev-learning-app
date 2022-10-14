@@ -23,5 +23,14 @@
     width: 100%;
     border: 5px rounded white;
   }
+.partners{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.partners img{
+  width: 10%;
+}
 
   

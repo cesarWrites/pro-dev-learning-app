@@ -11,7 +11,7 @@ function Students(){
   }, [])
   const getStudentDetails =() =>{
       axios
-      .get('http://localhost:9292/students')
+      .get('https://arcane-gorge-73424.herokuapp.com/students')
       .then((res)=>{
           console.log(res);
           setStudents(res.data);
@@ -33,7 +33,7 @@ function Students(){
                         <h1>{student.id}</h1>
                     </div>
                     <div className="use-name">
-                      <h1>{student.username}</h1>
+                      <h1>{student.studentname}</h1>
                       </div>
                       <div className="stat-det">
                               <h1>{student.status } </h1>

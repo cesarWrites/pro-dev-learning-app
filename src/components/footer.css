@@ -1,9 +1,32 @@
 .foot-div{
-    background-color: gray;
-    padding: 2%;
-    margin-top: 5%;
+    background-color: yellow;
+    height: 40vh;
     text-align: center;
-    left: 0;
+    padding: 2%;
     bottom: 0;
-    height: 60px;
-}  
+    position: relative;
+    width: 100%;
+  }
+
+  .navbar-1{
+    font-size: 1.5rem;
+    text-align: center;
+   margin-top: auto;
+  }
+  .navbar-1 nav{
+    margin: 0;
+  }
+  
+  .navbar-1 ul {
+    list-style: none;
+    padding: 2%;
+    width: 100%;
+  }
+  
+  .navbar-1 li a {
+    display: inline;
+    margin: 0 5px;
+    text-decoration: none;
+    color: black;
+  }
+    

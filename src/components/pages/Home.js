@@ -1,15 +1,19 @@
 import React, {useState} from "react";
 import NavBar from "./NavBar";
 import Footer from "./footer";
-import ';
 import NewCourse from "./NewCourse";
 
 function Home(){
     let [show, setForm] = useState(false);
+    let [signUp, setSignUp] = useState(false);
     const background_url = "https://codetoinvent.com/wp-content/uploads/2020/12/programming-courses-back.jpg"
 
     function handleClick(){
         setForm(true);
+      }
+
+      function handleSignUpClick(){
+        setSignUp(true);
       }
     return(
         <div className="home-div">
@@ -27,6 +31,8 @@ function Home(){
                 </article>
                 <button className="add-course-btn" onClick={handleClick}>Create a Course</button>
         {show ? <NewCourse /> : null}
+        <button className="add-course-btn" onClick={handleClick}>Create a Course</button>
+        {signUp ? <signUp /> : null}
             </div>
             <div className='bg-image'>
             <img src={background_url}/>

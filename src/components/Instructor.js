@@ -11,7 +11,7 @@ function Instructors(){
 
     const getAllInstructorDetails =() =>{
         axios
-        .get('http://localhost:9292/instructors')
+        .get('https://arcane-gorge-73424.herokuapp.com/instructors')
         .then((res)=>{
             console.log(res);
             setInstructors(res.data);
@@ -24,6 +24,7 @@ function Instructors(){
     return(
         <div className="instructor-div">
             <NavBar/>
+            <main>
             <h1>Instructor profiles</h1>
         <div className="instructors-container">
         {instructors.map((instructor) => (
@@ -36,6 +37,7 @@ function Instructors(){
                     </div>
             ))}
             </div>
+            </main>
             <DeleteStudent/>
             </div>
     )

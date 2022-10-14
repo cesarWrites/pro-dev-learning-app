@@ -8,7 +8,7 @@ function NewCourse(){
     const handleSubmit =(e) => {
         e.preventDefault();
       
-      axios.post('http://localhost:9292/courses', {
+      axios.post('https://arcane-gorge-73424.herokuapp.com/courses', {
       title:title,
       description:description,
       rating: rating

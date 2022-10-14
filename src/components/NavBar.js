@@ -9,9 +9,15 @@ function NavBar() {
         <li>
     <NavLink className="nav_link" to="/">Home</NavLink>
     </li>
+    <li><NavLink className="nav_link" to="/login">Login</NavLink>
+    </li>
     <li><NavLink className="nav_link" to="/courses">Courses</NavLink>
     </li>
+    <li><NavLink className="nav_link" to="/lessons">My Lessons</NavLink>
+    </li>
     <li><NavLink className="nav_link" to="/instructors">Instructors</NavLink>
+    </li>
+    <li><NavLink className="nav_link" to="/students">Students</NavLink>
     </li>
     <li><NavLink className="nav_link" to="/students">Students</NavLink>
     </li>
