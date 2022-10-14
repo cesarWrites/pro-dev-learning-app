@@ -6,6 +6,7 @@ import Lessons from './components/Lesson';
 import Students from './components/student'
 import Instructors from './components/Instructor';
 import Login from './components/pages/Login';
+import NavBar from './components/NavBar';
 function App() {
   return (
     <div className="App">
