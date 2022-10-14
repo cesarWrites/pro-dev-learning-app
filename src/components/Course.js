@@ -2,8 +2,6 @@ import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import NavBar from "./NavBar";
 import {useNavigate} from "react-router-dom";
-import Lessons from "./Lesson";
-
 function Courses(){ const navigate = useNavigate();
     const handleClick = id => {
         navigate(`${id}`)

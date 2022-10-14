@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import CourseDetails from "./CourseDetail";
 import NavBar from "./NavBar";
 import Footer from "./footer";
 import './home.css';
@@ -43,7 +42,7 @@ function Home(user){
             </div>
 
             <div className='bg-image'>
-            <img className="home-img" src={background_url}/>
+            <img className="home-img" src={background_url} alt=""/>
             </div>
             </div>
             <Partners/>
