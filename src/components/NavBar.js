@@ -19,8 +19,6 @@ function NavBar() {
     </li>
     <li><NavLink className="nav_link" to="/students">Students</NavLink>
     </li>
-    <li><NavLink className="nav_link" to="/students">Students</NavLink>
-    </li>
     </ul>
     </nav>
   </div>
