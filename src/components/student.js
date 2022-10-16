@@ -2,10 +2,16 @@ import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import NavBar from "./NavBar";
 import Footer from "./footer";
+import CreateStudent from "./APIs/CreateStudent";
 
 
 function Students(){
   const[students, setStudents] = useState([])
+  let [isStudent, setIsStudent] = useState(false);
+
+  function handleClick(){
+    setIsStudent(true);
+  }
   useEffect(()=>{
       getStudentDetails();
   }, [])
@@ -37,10 +43,12 @@ function Students(){
                       </div>
                       <div className="stat-det">
                               <h1>{student.status } </h1>
-                              </div>      
+                              </div>     
                       </div>
               ))}
               </div>
+              <button className="add-course-btn" onClick={handleClick}>New Student</button>
+        {isStudent ? <CreateStudent /> : null} 
               <Footer/>
       </div>
   )
