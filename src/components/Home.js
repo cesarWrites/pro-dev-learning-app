@@ -10,12 +10,14 @@ import Login from "./pages/Login";
 function Home(user){
     let [show, setForm] = useState(false);
     let [signUp, setSignUp] = useState(false);
+    const [showLogin, setShowLogin] = useState(true);
     const background_url = "https://images.unsplash.com/photo-1513258496099-48168024aec0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bGVhcm5pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
     function handleClick(){
         setForm(true);
       }
     function handleSignUpClick(){
-        setSignUp(true);
+        setSignUp(!signUp);
+        setShowLogin(!showLogin);
     }
     return(
         <div className="home-div">
@@ -36,8 +38,8 @@ function Home(user){
         {show ? <NewCourse /> : null}
         <button className="add-course-btn" onClick={handleSignUpClick}>Start Leaning</button>
         {signUp ? <SignUp /> : null}
+        {showLogin ? <Login /> : null}
         </div>
-        <Login />
             
             </div>
 

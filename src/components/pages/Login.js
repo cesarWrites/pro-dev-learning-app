@@ -14,6 +14,11 @@ function Login({ onLogin }) {
 
   const handleSubmit =(e) => {
     e.preventDefault();
+    if(username == '' || password == ''){
+       console.log("empty state");
+       return 
+    }
+
     fetch("https://arcane-gorge-73424.herokuapp.com/login", {
       method: "POST",
       headers: {
@@ -25,6 +30,9 @@ function Login({ onLogin }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => onLogin(user));
+        setUsername('');
+        setPassword('');
+        setIsShown(current => !current);
       }
     });
 
@@ -49,7 +57,7 @@ function Login({ onLogin }) {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button type="submit" onClick={handleClick}>Login</button>
+      <button type="submit" >Login</button>
     </form>
     <div>
       {isShown && (
