@@ -16,11 +16,8 @@ function Home(user){
         setForm(true);
       }
     function handleSignUpClick(){
-        setSignUp(true);
-    }
-
-    function handleLoginClick(){
-        setShowLogin(false);
+        setSignUp(!signUp);
+        setShowLogin(!showLogin);
     }
     return(
         <div className="home-div">
@@ -41,7 +38,6 @@ function Home(user){
         {show ? <NewCourse /> : null}
         <button className="add-course-btn" onClick={handleSignUpClick}>Start Leaning</button>
         {signUp ? <SignUp /> : null}
-        <button className="add-course-btn" onClick={handleLoginClick}>Login</button>
         {showLogin ? <Login /> : null}
         </div>
             
