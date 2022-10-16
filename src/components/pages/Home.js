@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import NavBar from "./NavBar";
-import Footer from "./footer";
-import NewCourse from "./NewCourse";
+import NavBar from "../NavBar";
+import Footer from "../footer";
+import NewCourse from "../NewCourse";
 
 function Home(){
     let [show, setForm] = useState(false);

@@ -29,9 +29,9 @@ function Lessons(){
         <div className='lesson-div' >
              {lessons.map((lesson) => (
                 <div className="lesson-det" key = {lesson.id}>
-                    <h2>{lesson.course_id}</h2>
-                    <h3>{lesson.topic}</h3>
-                    <p>{lesson.description}</p>
+                    
+                    <h3>{lesson.name}</h3>
+                    <p>{lesson.content}</p>
                     </div>
                     ))}
                    

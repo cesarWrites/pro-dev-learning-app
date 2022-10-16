@@ -2,9 +2,11 @@ import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import NavBar from "./NavBar";
 import {useNavigate} from "react-router-dom";
-function Courses(){ const navigate = useNavigate();
-    const handleClick = id => {
-        navigate(`${id}`)
+
+function Courses(){ 
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/lessons')
       };
     const[courses, setCourses] = useState([])
    
@@ -41,7 +43,7 @@ function Courses(){ const navigate = useNavigate();
                         <div className="book-item-det">
                         <h3>Description:{course.description}</h3>
                         <div>
-<button className="start-btn" onClick={() => handleClick(course.course_id)}>Start</button>
+<button className="start-btn" onClick={handleClick}>Start</button>
     </div>
                         
                         </div>

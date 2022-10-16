@@ -1,13 +1,16 @@
-import { useState} from "react";
+import { useState, useRef} from "react";
 import '../styles/auth.css';
 import Courses from "../Course";
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("")
+  const [isShown, setIsShown] = useState(false);
+  const form = useRef(null);
  const handleClick = () => {
-  <Courses/>
+  setIsShown(current => !current);
  }
+ 
 
   const handleSubmit =(e) => {
     e.preventDefault();
@@ -24,10 +27,13 @@ function Login({ onLogin }) {
         r.json().then((user) => onLogin(user));
       }
     });
+
+    form.current.reset();
   }
 
   return (
-    <form className = "login-form" onSubmit={handleSubmit}>
+    <div>
+    <form className = "login-form" ref={form} onSubmit={handleSubmit}>
       <h3>Login With Username and password</h3>
       <label htmlFor="username">Username: </label>
       <input
@@ -45,6 +51,14 @@ function Login({ onLogin }) {
       />
       <button type="submit" onClick={handleClick}>Login</button>
     </form>
+    <div>
+      {isShown && (
+        <div>
+          <h2>You are now logged in!</h2>
+        </div>
+      )}
+    </div>
+    </div>
   );
 }
 
