@@ -17,7 +17,7 @@ function Students(){
   }, [])
   const getStudentDetails =() =>{
       axios
-      .get('https://arcane-gorge-73424.herokuapp.com/students')
+      .get('https://mysite-81rd.onrender.com/students')
       .then((res)=>{
           console.log(res);
           setStudents(res.data);

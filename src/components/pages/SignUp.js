@@ -10,7 +10,7 @@ function SignUp({ setUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://arcane-gorge-73424.herokuapp.com/signup", {
+    fetch("https://mysite-81rd.onrender.com/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

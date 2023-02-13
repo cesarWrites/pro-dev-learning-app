@@ -16,7 +16,7 @@ function Courses(){
     }, [])
     const getCourseDetails =() =>{
         axios
-        .get('https://arcane-gorge-73424.herokuapp.com/courses')
+        .get('https://mysite-81rd.onrender.com/courses')
         .then((res)=>{
             console.log(res);
             setCourses(res.data);

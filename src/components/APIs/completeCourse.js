@@ -5,7 +5,7 @@ function CompleteCourse(){
     const [status, setStatus] = useState("")
     const handleSubmit =(e) => {
         e.preventDefault();
-    axios.patch(`https://arcane-gorge-73424.herokuapp.com/students/${id}`,{
+    axios.patch(`https://mysite-81rd.onrender.com/students/${id}`,{
         id:id,
     status:status
     })

@@ -5,7 +5,7 @@ function Landing(){
 const [user, setUser] = useState(null);
 
 useEffect(() => {
-  fetch("https://arcane-gorge-73424.herokuapp.com/me").then((response) => {
+  fetch("https://mysite-81rd.onrender.com/me").then((response) => {
     if (response.ok) {
       response.json().then((user) => setUser(user));
     }

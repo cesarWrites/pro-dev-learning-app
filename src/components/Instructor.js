@@ -11,7 +11,7 @@ function Instructors(){
 
     const getAllInstructorDetails =() =>{
         axios
-        .get('https://arcane-gorge-73424.herokuapp.com/instructors')
+        .get('https://mysite-81rd.onrender.com/instructors')
         .then((res)=>{
             console.log(res);
             setInstructors(res.data);

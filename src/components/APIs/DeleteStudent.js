@@ -7,7 +7,7 @@ function DeleteStudent(){
 const handleSubmit =(e) => {
     e.preventDefault();
   
-  axios.delete(`https://arcane-gorge-73424.herokuapp.com/students/${id}`, {
+  axios.delete(`https://mysite-81rd.onrender.com/students/${id}`, {
 })
 .then((response) => {
   console.log(response)

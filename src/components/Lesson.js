@@ -15,7 +15,7 @@ function Lessons(){
 
     const getAllLessons =() =>{
         axios
-        .get('https://arcane-gorge-73424.herokuapp.com/lessons')
+        .get('https://mysite-81rd.onrender.com/lessons')
         .then((res)=>{
             console.log(res);
             setLessons(res.data);

@@ -7,7 +7,7 @@ function CreateStudent(){
     const handleSubmit =(e) => {
         e.preventDefault();
       
-      axios.post('https://arcane-gorge-73424.herokuapp.com/students', {
+      axios.post('https://mysite-81rd.onrender.com/students', {
       studentname:studentname,
       status:status,
     })
